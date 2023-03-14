@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>이상한 사진 모음집</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@900&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		body,h1,p,li,div,img{margin: 0}
+
+		body{
+			/*background: black;*/
+		}
+
+		#container1,#container2,#container3,{
+			display: block;
+			background: white;
+			width: 1500px;
+			margin: 150px;
+			margin-left: 250px;
+			margin: auto; margin-bottom: 10px;}
+
+		#container4{display: block;}	
+
+		#container5{display: none;
+			background: white;
+			width: 1500px;
+			margin: 150px;
+			margin-left: 250px;
+			margin: auto; margin-bottom: 10px;}
+		
+		/*나브*/
+		nav{
+			position: fixed; top: 0;
+			margin: auto;
+			width: 1800px; height: 80px;
+			background: lightgray;
+		}
+
+		.menu{
+			display: flex;
+			justify-content: space-evenly;
+			line-height: 80px;
+		}
+
+		.menu_c{
+			/*background: yellow;*/
+			display: flex;
+			list-style: none;
+			font-size: 2em;
+			font-family: 'Black Han Sans', sans-serif;
+		}
+
+		.li_1:hover{
+			background: linear-gradient(to left top, #fbf389, #fca31c); 
+			color: transparent; 
+			-webkit-background-clip: text;
+		}
+
+		.li_2:hover{
+			background: linear-gradient(to left top, #ff8714, #f73696); 
+			color: transparent; 
+			-webkit-background-clip: text;
+		}
+
+		.li_3:hover{
+			background: linear-gradient(to left top, #b434b4, #3f3dd7); 
+			color: transparent; 
+			-webkit-background-clip: text;
+		}
+
+		.li_4:hover{
+			background: linear-gradient(to left top, #90F7EC, #81FBB8); 
+			color: transparent; 
+			-webkit-background-clip: text;
+		}
+
+		.li_1,.li_2,.li_3,.li_4,.li_0{
+			text-decoration: none;
+			color: black;
+			margin-left: 100px;
+		}
+
+		.li_0:hover{
+			background: linear-gradient(to left top, #90F7EC, #81FBB8); 
+			color: transparent; 
+			-webkit-background-clip: text;
+		}
+
+
+		/*콘테이너*/
+		.container1{
+			display: flex; flex-wrap: wrap;
+			background: white;
+			width: 1500px;
+			margin: 150px;
+			margin-left: 250px;
+			margin: auto; margin-bottom: 10px;
+		}
+
+		.container2{
+			display: flex; flex-wrap: wrap;
+			background: white;
+			width: 1500px;
+			margin: auto; margin-bottom: 10px; margin-top: 50px;
+		}
+
+		.container3{
+			display: flex; flex-wrap: wrap;
+			background: white;
+			width: 1500px;
+			margin: 150px;
+			margin-left: 250px;
+			margin: auto; margin-bottom: 10px;
+		}
+
+		.container5{
+			display: flex; flex-wrap: wrap;
+			background: white;
+			width: 1500px;
+			margin: 150px;
+			margin-left: 250px;
+			margin: auto; margin-bottom: 10px;}
+
+		.col_3{
+			width: 740px; margin:0px 5px;
+			/*background-color: yellow;*/
+		}
+
+		.col_5{
+			width: 240px; margin:0px 5px; margin-top: 100px;
+		}
+
+		/*그림*/
+		.cat{
+			display: block; margin: auto; margin-top: 10px; width: 15%; height: auto;
+		}
+
+		.img1{
+			width: 70%; height: auto; margin: auto; margin-top: 300px;
+		}
+
+		.img2{
+			width: 70%; height: auto; margin: auto; margin-top: 300px; margin-left: 50px;
+		}
+
+		.img3{
+			width: 70%; height: auto; margin: auto; margin-top: 300px;
+		}
+
+		.cat{
+			width: 100%; height: auto;
+		}
+
+		/*텍스트스타일*/
+		.a{
+			background: linear-gradient(to left top, #fbf389, #fca31c); 
+			color: transparent; 
+			-webkit-background-clip: text;
+			margin: 50px; margin-top: 200px;
+			font-size: 5em;
+			font-family: 'Black Han Sans', sans-serif;
+		}
+
+		.a_1{
+			margin: 50px; margin-top: 250px;
+			font-weight: 900;
+			font-size: 1.7em;
+		}
+
+		.a_2{
+			margin: 50px;
+			line-height: 1.3em;
+			font-weight: 600;
+			font-size: 1.4em;
+		}
+
+		.b{ 
+			background: linear-gradient(to left top, #ff8714, #f73696); 
+			color: transparent; 
+			-webkit-background-clip: text;
+			margin-top: 200px;
+			font-size: 5em;
+			font-family: 'Black Han Sans', sans-serif;
+		}
+
+		.b_1{
+			margin-top: 250px;
+			font-weight: 900;
+			font-size: 1.7em;
+		}
+
+		.b_2{
+			margin-top: 50px;
+			line-height: 1.3em;
+			font-weight: 600;
+			font-size: 1em;
+			padding-right: 80px;
+		}
+
+		.c{
+			background: linear-gradient(to left top, #b434b4, #3f3dd7); 
+			color: transparent; 
+			-webkit-background-clip: text;
+			margin: 50px; margin-top: 200px;
+			font-size: 5em;
+			font-family: 'Black Han Sans', sans-serif;
+		}
+
+		.c_1{
+			margin: 50px; margin-top: 250px;
+			font-weight: 900;
+			font-size: 1.7em;
+		}
+
+		.c_2{
+			margin: 50px;
+			line-height: 1.3em;
+			font-weight: 600;
+			font-size: 1em;
+		}
+
+		.text_sty1{
+			margin-top: 200px;
+			font-size: 1.2em;
+			text-align: center;
+		}
+
+		.text_sty2{
+			text-align: center;
+			color: blue;
+			font-size: 1em;
+			margin-top: 120px;
+			text-decoration: underline;
+			text-decoration-color: blue;
+		}
+
+		.text_sty3{
+			display: block; margin: auto;
+			text-align: center;
+			color: red;
+			font-size: 1em;
+			margin-top: 10px;
+		}
+
+		/*기타*/
+
+		*{
+		  box-sizing: border-box;
+		  margin: auto;
+			}
+
+		.etc_1{
+		  text-align: center; font-size: 1.5em;
+		  margin: 300px 0 20px 0;
+			}
+
+		.etc_img{display: flex; margin: auto;}
+		
+		.wrap-vertical{
+		  width: 300px;
+		  overflow: scroll;
+		  background: black;
+		  border: 1px solid #000;
+		   /* 가로 스크롤 */
+		  overflow: auto;
+		  white-space: nowrap;
+		  margin: auto;
+			}
+
+		.e1,.e2,.e3,.e4,.e5{display: block; width: 100%;}
+
+		.etc_2{
+			font-size: 1em; color: gray; text-decoration: line-through;
+			font-weight: 300;
+			text-align: center; background: white;
+			margin-top: 20px; margin-bottom: 300px;
+		}
+
+		.dot{
+			text-align: center; margin-top: 150px;
+		}
+
+	</style>
+
+</head>
+	<body>
+		<nav>
+			<div class="menu">
+				<div class="menu_c">
+					<li class="O"><a href="#No1" class="li_0">✦✦✦</a></li>
+					<li class="A"><a href="#No1" class="li_1">발렌시아가 쓰레기통</a></li>
+					<li class="B"><a href="#No2" class="li_2">죽을때지</a></li>
+					<li class="C"><a href="#No3" class="li_3">맥-도널드</a></li>
+					<li class="E"><a href="#No5" class="li_4">귀여운 사진 모음집</a></li>
+				</div>
+			</div>
+		</nav>
+		<header>
+			
+		</header>
+		<div id="No1">
+			<div class="container1" id="container1">
+				<div class="col_3">
+					<div class="a">발렌시아가 쓰레기통</div>
+					<h2 class="a_1">"와, 저것 좀 봐요."</h2>
+					<p class="a_2">그건 저번 동선동 거리정화 봉사활동을 함께 한 사람의 말소리였다.</p>
+					<p class="a_2">
+						우리는 재밌는 것을 발견했다. 발렌시아가 스티커가 붙은 음식물 쓰레기통이었다. 길거리 음식점 앞에 지저분한 쓰레기통 위 하얀 스티커가 어색함을 넘어 인상적일 정도의 부조화를 이루고 있었다. 한때 여기저기  로고 스티커를 붙이는 것이 유행이던게 떠오르며 과시적 명품 소비에 대한 유쾌한 풍자를 보는 기분이 들었다.
+					</p>
+					<p class="a_2">
+						담배 꽁초와 프랜차이즈 일회용 컵을 치우다 찾은 발렌시아가음식물 쓰레기통은 세상을 우습게 만드는 힘이 있었다. 종종 명품의 세계는 우리가 이해하기 난해한 감각을 내보이기도 한다. 그럼에도 그런 것을 구매하는 사람들도 존재한다.
+					</p>
+					<p class="a_2">
+						정확히 어떤 것을 가리켜 풍자하는 것인지는 알 수 없었다. 혹은 풍자의 의도가 없이 부조화에서 오는 간극을 재밌게 여긴 것일 수도 있다. 그래도 그 블랙코미디같은 느낌을 기념삼아 나는 사진 하나를 찍어 놓았다.
+					</p>
+				</div>
+				<div class="col_3">
+					<img src="./img1.jpeg" class="img1">
+				</div>
+			</div>
+		</div>
+		<div id="No2">
+			<div class="container2" id="container2">
+				<div class="col_3">
+					<img src="./img2.jpeg" class="img2">
+				</div>
+				<div class="col_3">
+					<div class="b">죽을때지!</div>
+					<h2 class="b_1">"죽을때(까)지 투쟁"<h2>
+					<p class="b_2">
+						오빠의 졸업식 때였다. 오빠 말로는 한 두달 정도 전부터 임금 협상을 위한 운동이 일어나고 있다고 했다. 오빠의 말대로 대학교 안에는 이런저런 대자보와 붉은 색으로 쓰여진 현수막이 잔뜩있었다. 잠시 신호를 기다리며 멈춰있을 때, 나는 한 특이한 현수막을 발견했다.
+					</p>
+					<p class="b_2">
+						"죽을때까지"라고 쓰고 싶었을 게 분명한 현수막은 하필이면 "까"가 빠져서 미묘한 어감이 되어있었다. 진지한 노동자의 인권과 관련된 주제임을 알면서도 "죽을때지"라는 단어는 조금 웃겼다. 왠지 젊은 대학생이 아니라 인생의 황혼기에 접어드신 어르신이 맘에도 없는 말을 내뱉으시는 것 같은 느낌이었다. 심지어 다 쓰고 나서 알았는지 위쪽에 자그마하게 붙어있는 "까"가 현수막에 재미를 더하고 있었다.
+					</p>
+					<p class="b_2">
+						나는 고민하다가 재빠르게 사진을 찍었다.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="No3">
+			<div class="container3" id="container3">
+				<div class="col_3">
+					<div class="c">맥-도널드</div>
+					<h2 class="c_1">"도널드를 찾아라<h2>
+					<p class="c_2">
+						정문 앞 <i>맥도날드</i>라면 다들 한번쯤 가봤을 것이라고 생각한다. 거기에 2층이 있다는 것도 다들 알거다. 그럼 거기 올라가는 길에 다소 섬뜩하게 생긴 도널드가 우리를 보고 있다는 건 알고 있나?
+					</p>
+					<p class="c_2">
+						귀여운 캐릭터 사이에 혼자만 다른 굵기로 그려진 도널드는 신경쓰면 한없이 신경쓰이는 존재였다. 인테리어를 대체 누가 한건지 궁금하게 하는 감각을 뽐내고 있다. 묘하게 퀄리티가 떨어지는 도널드는 지나치기에는 아쉬운 느낌이 들었다. 머리는 제대로 뒤에 있는 느낌이 들면서 왼쪽 아래는 다 보이는 도널드는 눈을 거슬리게 했다. 나는 햄버거를 먹고 내려가는 길에 일러-image trace 기능으로 만들어진 것 같은 도널드를 한 장 찍어두었다
+					</p>
+					<p class="c_2">
+						그래도 다행이 벽면에는 여러 도널드가 우리를 지켜보고 있다. 한 명이었다면 오히려 소름끼치지 않았을까?
+					</p>
+				</div>
+				<div class="col_3">
+					<img src="./img3.jpeg" class="img3">
+				</div>
+			</div>
+		</div>
+		<div id="No4">
+			<div id="container4">
+				<div class="dot">✦</div>
+				<div class="dot">✦</div>
+				<div class="dot">✦</div>
+				<h1 class="etc_1">>기타<</h1>
+				  <div class="wrap-vertical">
+				    <p class="etc_img"><img src="./1.jpeg" class="e1"><img src="./2.jpeg" class="e1"><img src="./3.jpeg" class="e1"><img src="./4.jpeg" class="e1"><img src="./5.jpeg" class="e1"></p>
+				    </div>
+				  <h2 class="etc_2"><br>좌우로 넘겨보세요.</br><br>pija</br><br>누가여기서장사하래</br><br>똥,홍학,강아지장난감</br><br>천국으로가는문</br><br>요로결석제거실패!</br></h2>
+			</div>
+		</div>
+
+		<div id="No5">
+			<div id="container5">
+				<div class="container5">
+					<div class="col_5">
+						<img src="./cat1.jpeg" class="cat">
+						<img src="./cat2.jpeg" class="cat">
+						<img src="./cat3.jpeg" class="cat">
+						<img src="./cat4.jpeg" class="cat">
+					</div>
+					<div class="col_5">	
+						<img src="./cat5.jpeg" class="cat">
+						<img src="./cat6.jpeg" class="cat">
+						<img src="./cat7.jpeg" class="cat">
+						<img src="./cat8.jpeg" class="cat">
+					</div>	
+					<div class="col_5">
+						<img src="./cat9.jpeg" class="cat">
+						<img src="./cat10.jpeg" class="cat">
+						<img src="./cat11.jpeg" class="cat">
+						<img src="./cat12.jpeg" class="cat">
+					</div>
+					<div class="col_5">	
+						<img src="./cat13.jpeg" class="cat">
+						<img src="./cat14.jpeg" class="cat">
+						<img src="./cat15.jpeg" class="cat">
+						<img src="./cat16.jpeg" class="cat">
+					</div>
+					<div class="col_5">	
+						<img src="./cat17.jpeg" class="cat">
+						<img src="./cat18.jpeg" class="cat">
+						<img src="./cat19.jpeg" class="cat">
+						<img src="./cat20.jpeg" class="cat">
+					</div>
+					<div class="col_5">	
+						<img src="./cat21.jpeg" class="cat">
+						<img src="./cat22.jpeg" class="cat">
+					</div>
+				</div>	
+			</div>
+		</div>
+<script>
+	const mainContainer = document.querySelector('#container1');
+	const mainContainer2 = document.querySelector('#container2');
+	const mainContainer3 = document.querySelector('#container3');
+	const mainContainer4 = document.querySelector('#container4');
+	const mainContainer5 = document.querySelector('#container5');
+			
+	document.querySelector('.E').addEventListener('click', function() {
+	  mainContainer.style.display = 'none';
+	  mainContainer2.style.display = 'none';
+	  mainContainer3.style.display = 'none';
+	  mainContainer4.style.display = 'none';
+	  mainContainer5.style.display = 'block';
+	});
+
+	document.querySelector('.O').addEventListener('click', function() {
+	  mainContainer.style.display = 'flex';
+	  mainContainer2.style.display = 'flex';
+	  mainContainer3.style.display = 'flex';
+	  mainContainer4.style.display = 'block';
+	  mainContainer5.style.display = 'none';
+	});
+
+</script>
+</body>
+</html>
